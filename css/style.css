@@ -1,0 +1,298 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+  --primary-color: #484745;
+  --secondary-color: #fff;
+  --background-color: #f5ebe1;
+  --card-color: #e2d0c4;
+  --button-color: #d6ccc2;
+}
+body{
+    background-color: var(--background-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+html{ scroll-behavior: smooth; }
+.navbar{
+    border-bottom: 3px solid var(--primary-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: var(--background-color);
+}
+.navbar-brand{
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+.navbar-nav{
+    gap: 20px;
+}
+.navbar-nav li{
+    list-style: none;
+}
+
+.navbar-nav li a{
+    text-decoration: none;
+    color: var(--primary-color) !important;
+    font-size: 16px;
+    font-weight: 600;
+    padding-bottom: 5px;
+    position: relative;
+}
+.navbar-nav li a::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: all 0.3s ease;
+}
+.navbar-nav li a:hover::after{
+    width: 100%;
+}
+
+.login-link{
+    background-color: var(--primary-color);
+     padding: 5px 10px;
+     border-radius: 5px;
+     color: #fff !important;
+     text-decoration: none !important;
+     font-size: 16px;
+     font-weight: 600;
+     padding-bottom: 5px;
+ }
+ .register-link{
+    background-color: var(--primary-color);
+    padding: 5px 10px !important;
+    border-radius: 5px;
+    color: #fff !important;
+    transition: all 0.3s ease;
+ }
+ .register-link:hover, .login-link:hover{
+    background-color: #33312f !important;
+ }
+
+/* hero section */
+.hero{
+    padding-top: 100px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+}
+.hero::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80px;
+    height: 80px;
+    background-color: var(--card-color);
+    opacity: 0.8;
+}
+.hero::before{
+    content: '';
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    width: 60px;
+    height: 60px;
+    background-color: var(--button-color);
+}
+
+.heroContent{
+   width: 50%;
+   padding-top: 50px;
+}
+
+.heroImage{
+    width: 50%;
+    position: relative;
+}
+.heroImage::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80px;
+    height: 80px;
+    background-color: var(--card-color);
+    opacity: 0.8;
+}
+.heroImage::before{
+    content: '';
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    width: 60px;
+    height: 60px;
+    background-color: var(--button-color);
+}
+.heroImage img{
+    width: 100%;
+    height: 80vh;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.heroContent h1{
+    font-size: 40px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+.heroContent p{
+    font-size: 16px;
+    color: var(--primary-color);
+    line-height: 1.5;
+    padding-top: 10px;
+    position: relative;
+    font-weight: 500;
+}
+.heroContentText{
+    padding: 20px 30px 10px 5px;
+    position: relative;
+}
+.heroContentText::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 75%;
+    background-color: var(--card-color);
+    z-index: -1;
+}
+.heroContentButton{
+    padding: 5px 10px;
+    border-radius: 4px;
+    width: fit-content;
+    background-color: var(--button-color);
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#start{
+    padding:5px 0 !important;
+}
+
+.heroContentButton a{
+    text-decoration: none;
+    color: var(--primary-color);
+    padding:5px 0 !important;
+}
+
+.heroContentButton:hover{
+    background-color: var(--primary-color);
+}
+.heroContentButton:hover a{
+    color: #fff !important;
+}
+.double-arrow{
+    animation: arrow-animation 1s infinite;
+}
+@keyframes arrow-animation{
+    0%{
+        transform: translateX(0);
+    }
+    50%{
+        transform: translateX(10px);
+    }
+}
+
+/* services section */
+.services{
+    padding: 100px 0;
+}
+.services .container{
+    padding-top: 50px;
+}
+
+/* contact section */
+#contact{
+    padding: 100px 0;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+}
+.cardBox{
+    background-color: var(--card-color);
+    padding: 24px 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+}
+#contact h2{
+    color: var(--primary-color);
+}
+#contact .form-control,
+#contact .form-select{
+    border: 2px solid rgba(72,71,69,0.25);
+}
+#contact .form-control:focus,
+#contact .form-select:focus{
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 .2rem rgba(72,71,69,0.15);
+}
+.contactBtn{
+    background-color: var(--primary-color);
+    color: #fff;
+    font-weight: 600;
+}
+.contactBtn:hover{
+    background-color: #33312f;
+    color: #fff;
+}
+.serviceCard{
+    background-color: var(--card-color);
+    /* border-radius: 10px; */
+    position: relative;
+    text-align: center;
+    height: 100%;
+    max-width: 300px;
+    padding:150px 20px 20px 20px;
+}
+.serviceCard img{
+    width: 60%;
+    height: 200px;
+    object-fit: cover;
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.serviceCard h2{
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-top: 10px;
+}
+.serviceCard p{
+    font-size: 16px;
+    color: var(--primary-color);
+    line-height: 1.5;
+}
+.contactInfoImage{
+   width: 100%;
+   height: 250px;
+   object-fit: cover;
+   border-radius: 10px;
+   margin-top: 20px;
+   /* box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1); */
+}
+/* footer section */
+footer{
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
